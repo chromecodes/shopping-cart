@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import About from "./components/About";
@@ -10,13 +10,12 @@ export default function App() {
     <>
       <div className='app bg-slate-100'>
         <Header />
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/Shop' element={<Shop />} />
-            <Route path='/About' element={<About />} />
-          </Routes>
-        </BrowserRouter>
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Shop' element={<Shop />} />
+          <Route path='/About' element={<About />} />
+        </Routes>
       </div>
     </>
   );
