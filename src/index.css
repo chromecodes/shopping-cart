@@ -20,6 +20,10 @@
   font-family: ll;
   src: url(./assets/LovelineGlamour-owdE0.ttf);
 }
+@font-face {
+  font-family: sss;
+  src: url(./assets/ShiftyNotesRegular-BWZ6d.ttf);
+}
 
 #root {
   height: 100vh;
@@ -33,13 +37,15 @@
   font-family: neon2;
 }
 .nav {
-  font-family: aaa;
+  font-family: sss;
 }
 .home {
-  font-family: ll;
-  font-size: 110px;
-  line-height: 0.9;
+  font-family: sss;
+  font-size: 72px;
 }
-.shadow {
+.shop {
+  background-color: black;
+}
+.lights {
   text-shadow: 0px 0px 10px #e2e8f0;
 }
