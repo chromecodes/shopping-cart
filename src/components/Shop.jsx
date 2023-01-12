@@ -3,13 +3,13 @@ import Card from "./Card";
 import { Products } from "./data";
 import { motion } from "framer-motion";
 
-const Shop = () => {
+const Shop = ({ open, add }) => {
   const [items, setItems] = useState(Products);
   const [current, setCurrent] = useState("All Products");
 
   const createItem = () => {
     return items.map((item) => {
-      return <Card item={item} />;
+      return <Card item={item} open={open} add={add} />;
     });
   };
 

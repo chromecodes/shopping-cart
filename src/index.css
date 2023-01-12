@@ -47,13 +47,17 @@
   background-color: black;
   font-family: sss;
 }
+.cartCnt {
+  font-family: sss;
+}
 .num {
   font-family: aaa;
 }
 .cardContainer {
   overflow-y: scroll;
 }
-.cardContainer {
+.cardContainer,
+.cartItems {
   overflow-y: scroll;
 }
 

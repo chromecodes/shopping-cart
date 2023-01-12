@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { VscTag } from "react-icons/vsc";
 
-const Card = ({ item }) => {
+const Card = ({ item, open, add }) => {
   const [aaa, setaaa] = useState(false);
 
   const expand = (e) => {
@@ -43,7 +43,12 @@ const Card = ({ item }) => {
   };
 
   const addItem = () => {
-    console.log(item);
+    add(item);
+  };
+
+  const checkoutItem = () => {
+    add(item);
+    open();
   };
 
   return (
@@ -80,7 +85,10 @@ const Card = ({ item }) => {
                 >
                   Add to Cart
                 </button>
-                <button className='out p-5 w-1/2 bg-slate-600 rounded-br-3xl '>
+                <button
+                  onClick={checkoutItem}
+                  className='out p-5 w-1/2 bg-slate-600 rounded-br-3xl '
+                >
                   Checkout
                 </button>
               </div>

@@ -17,14 +17,21 @@ export default function App() {
     updateShowCart(false);
   };
 
+  const addItem = (item) => {
+    updateCart([...cart, item]);
+  };
+
   return (
     <>
       <div className='app bg-slate-100'>
-        {showCart ? <Cart close={closeCart} /> : undefined}
+        {showCart ? <Cart close={closeCart} cart={cart} /> : false}
         <Header open={openCart} />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/Shop' element={<Shop />} />
+          <Route
+            path='/Shop'
+            element={<Shop open={openCart} add={addItem} />}
+          />
           <Route path='/About' element={<About />} />
         </Routes>
       </div>
