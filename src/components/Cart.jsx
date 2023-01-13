@@ -4,6 +4,9 @@ import Item from "./Item";
 
 const Cart = ({ close, cart }) => {
   const displayItems = () => {
+    if (cart.length === 0) {
+      return <div className='text-6xl'> Your Cart is Empty</div>;
+    }
     return cart.map((item) => {
       return <Item item={item} />;
     });
