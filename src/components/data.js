@@ -1,13 +1,4 @@
 export const Products = (() => {
-  let Item = [
-    {
-      type: "Lamp",
-      id: "T1",
-      name: "Spherical Lamp",
-      img: "src/assets/TL1.png",
-      price: 100,
-    },
-  ];
   let data = [
     {
       type: "Lamp",
@@ -15,14 +6,18 @@ export const Products = (() => {
       name: "Spherical Lamp",
       img: "src/assets/TL1.png",
       imgs: "src/assets/TL11.png",
-      price: 100,
       des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      price: 100,
+      amt: 1,
     },
     {
       id: "T2",
       type: "Lamp",
       name: "Vintage Wooden Lamp",
       img: "src/assets/TL2.png",
+      imgs: "src/assets/TL12.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -30,6 +25,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Cage Lamp",
       img: "src/assets/TL3.png",
+      imgs: "src/assets/TL13.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -37,6 +35,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Flower Vase Lamp",
       img: "src/assets/TL4.png",
+      imgs: "src/assets/TL14.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -44,6 +45,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Box Lamp",
       img: "src/assets/TL5.png",
+      imgs: "src/assets/TL15.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -51,6 +55,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Sci-fi Lamp",
       img: "src/assets/TL6.png",
+      imgs: "src/assets/TL16.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -58,6 +65,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Tiny Decoration Lamp",
       img: "src/assets/TL7.png",
+      imgs: "src/assets/TL17.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -65,6 +75,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Workshop Lamp",
       img: "src/assets/TL8.png",
+      imgs: "src/assets/TL18.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -72,6 +85,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Crystal Salt Lamp",
       img: "src/assets/TL9.png",
+      imgs: "src/assets/TL19.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -79,6 +95,9 @@ export const Products = (() => {
       type: "Lamp",
       name: "Table Lamp",
       img: "src/assets/TL10.png",
+      imgs: "src/assets/TL110.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
 
@@ -87,6 +106,9 @@ export const Products = (() => {
       type: "Light",
       name: "Wall Light",
       img: "src/assets/WL1.png",
+      imgs: "src/assets/WL11.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -94,6 +116,9 @@ export const Products = (() => {
       type: "Light",
       name: "Vintage Celling Light",
       img: "src/assets/WL2.png",
+      imgs: "src/assets/WL12.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -101,6 +126,9 @@ export const Products = (() => {
       type: "Light",
       name: "Shade Light",
       img: "src/assets/WL3.png",
+      imgs: "src/assets/WL13.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -108,6 +136,9 @@ export const Products = (() => {
       type: "Light",
       name: "Disc Light",
       img: "src/assets/WL4.png",
+      imgs: "src/assets/WL14.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -115,6 +146,9 @@ export const Products = (() => {
       type: "Light",
       name: "Workshop Light",
       img: "src/assets/WL5.png",
+      imgs: "src/assets/WL15.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -122,6 +156,9 @@ export const Products = (() => {
       type: "Light",
       name: "Sci-fi Light",
       img: "src/assets/WL6.png",
+      imgs: "src/assets/WL16.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -129,6 +166,9 @@ export const Products = (() => {
       type: "Light",
       name: "Gold Decoration Light",
       img: "src/assets/WL7.png",
+      imgs: "src/assets/WL17.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -136,6 +176,9 @@ export const Products = (() => {
       type: "Light",
       name: "Workshop Light",
       img: "src/assets/WL8.png",
+      imgs: "src/assets/WL18.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
@@ -143,13 +186,19 @@ export const Products = (() => {
       type: "Light",
       name: "CrysWal SalW Light",
       img: "src/assets/WL9.png",
+      imgs: "src/assets/WL19.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
     {
       id: "WL10",
       type: "Light",
       name: "Wable Light",
-      img: "src/src/assets/WL10.png",
+      img: "src/assets/WL10.png",
+      imgs: "src/assets/WL110.png",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reiciendis necessitatibus quidem? Fugit ipsam aperiam labore officiis vel nihil eligendi nobis voluptate ex, inventore atque impedit quis, ratione quo. Quibusdam.",
+      amt: 1,
       price: 100,
     },
   ];

@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Item from "./Item";
 
-const Cart = ({ close, cart }) => {
+const Cart = ({ close, cart, increItem, decreItem }) => {
   const displayItems = () => {
     if (cart.length === 0) {
       return <div className='text-6xl'> Your Cart is Empty</div>;
     }
-    return cart.map((item) => {
-      return <Item item={item} />;
+    return cart.map((item, index) => {
+      return (
+        <Item
+          item={item}
+          key={index}
+          i={index}
+          decreItem={decreItem}
+          increItem={increItem}
+        />
+      );
     });
   };
 
