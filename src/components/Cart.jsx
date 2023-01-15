@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Item from "./Item";
 
-const Cart = ({ close, cart, increItem, decreItem }) => {
+const Cart = ({ close, cart, total, removeItem, increItem, decreItem }) => {
   const displayItems = () => {
     if (cart.length === 0) {
       return <div className='text-6xl'> Your Cart is Empty</div>;
@@ -12,9 +12,11 @@ const Cart = ({ close, cart, increItem, decreItem }) => {
         <Item
           item={item}
           key={index}
+          total={total}
           i={index}
           decreItem={decreItem}
           increItem={increItem}
+          removeItem={removeItem}
         />
       );
     });
@@ -40,8 +42,8 @@ const Cart = ({ close, cart, increItem, decreItem }) => {
     },
     present: {
       x: 0,
-      background: "rgba(24,24,27,0.98)",
-      backdropFilter: "blur(0.2rem)",
+      background: "rgba(24,24,27,0.82)",
+      backdropFilter: "blur(1rem)",
     },
   };
   return (
@@ -68,13 +70,14 @@ const Cart = ({ close, cart, increItem, decreItem }) => {
         }}
         className='cart w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
       >
-        <div className='cartName pt-10 pl-10 text-5xl font-inherit'>
-          Your Cart
-        </div>
-        <div className='cartItems flex grow flex-wrap over gap-5'>
+        <div className='cartName  pl-10 text-5xl font-inherit'>Your Cart</div>
+        <div className='cartItems flex grow flex-wrap w-[90%]'>
           {displayItems()}
         </div>
-        <div className='total text-4xl '> Total :</div>
+        <div className='total text-4xl '>
+          Total : <span className='num font-bold'>{total}</span>
+        </div>
+
         <motion.button
           whileTap={{ scale: "0.9" }}
           whileHover={{

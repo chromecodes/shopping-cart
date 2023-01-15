@@ -23,11 +23,25 @@ export default function App() {
     updateCart([...cart, item]);
   };
 
-  const totalVal = () => {
-    cart.reduce((a, b) => {
-      a.amt * a.price + b.amt * b.price;
-    }, 0);
+  const removeItem = (i) => {
+    let tempCart = cart;
+    tempCart.splice(i, 1);
+    updateCart([...tempCart]);
   };
+
+  const totalVal = () => {
+    let totalI = cart.reduce((a, b) => {
+      return a + b.price * b.amt;
+    }, 0);
+    updateTotal(totalI);
+  };
+
+  useEffect(() => {
+    let totalI = cart.reduce((a, b) => {
+      return a + b.price * b.amt;
+    }, 0);
+    updateTotal(totalI);
+  }, [cart]);
 
   const increItem = (i) => {
     let tempCart = cart;
@@ -35,6 +49,7 @@ export default function App() {
       tempCart[i].amt += 1;
     }
     updateCart([...tempCart]);
+    console.log(totalVal());
   };
 
   const decreItem = (i) => {
@@ -52,8 +67,10 @@ export default function App() {
           <Cart
             close={closeCart}
             cart={cart}
+            total={total}
             decreItem={decreItem}
             increItem={increItem}
+            removeItem={removeItem}
           />
         ) : undefined}
         <Header open={openCart} />
