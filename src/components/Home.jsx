@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import { motion, useAnimation, useTime } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   const control = useAnimation();
 
@@ -50,7 +52,7 @@ const Home = () => {
             }}
             className='absolute left-1/4 bottom-44 text-3xl px-8 py-4 border-2 rounded-3xl border-neutral-700 '
           >
-            shop now
+            <Link to='/shop'>shop now</Link>
           </motion.button>
         </div>
       </div>

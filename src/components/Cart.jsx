@@ -1,11 +1,22 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Item from "./Item";
+import { Link } from "react-router-dom";
 
-const Cart = ({ close, cart, total, removeItem, increItem, decreItem }) => {
+const Cart = ({
+  close,
+  cart,
+  total,
+  removeItem,
+  increItem,
+  decreItem,
+  resetCart,
+}) => {
   const displayItems = () => {
     if (cart.length === 0) {
-      return <div className='text-6xl'> Your Cart is Empty</div>;
+      return (
+        <div className='text-6xl text-center w-full'> Your Cart is Empty</div>
+      );
     }
     return cart.map((item, index) => {
       return (
@@ -71,7 +82,7 @@ const Cart = ({ close, cart, total, removeItem, increItem, decreItem }) => {
         className='cart w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
       >
         <div className='cartName  pl-10 text-5xl font-inherit'>Your Cart</div>
-        <div className='cartItems flex grow flex-wrap w-[90%]'>
+        <div className='cartItems flex grow flex-wrap gap-y-5 w-[90%]'>
           {displayItems()}
         </div>
         <div className='total text-4xl '>
@@ -79,13 +90,18 @@ const Cart = ({ close, cart, total, removeItem, increItem, decreItem }) => {
         </div>
 
         <motion.button
+          onClick={() => {
+            if (cart.length > 0) {
+              resetCart();
+            }
+          }}
           whileTap={{ scale: "0.9" }}
           whileHover={{
             boxShadow: "0px 0px 10px 0px #fcd34d",
           }}
           className='out bg-Black text-amber-200 text-4xl rounded-2xl border border-amber-200 w-64 p-5'
         >
-          Checkout
+          {cart.length > 0 ? "Checkout" : <Link to='/shop'> Shop</Link>}
         </motion.button>
       </motion.div>
     </motion.div>

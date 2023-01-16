@@ -2,10 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiShoppingBag } from "react-icons/fi";
 
-const Header = ({ open }) => {
+const Header = ({ open, items }) => {
   const cart = () => {
     open();
     console.log(1);
+  };
+
+  const showPromp = () => {
+    if (items > 0) {
+      return (
+        <div className='promt pl-2.5'>
+          <div className='block num  w-6 h-6 bg-slate-100 rounded text-black text-xl font-bold flex justify-center '>
+            {items}
+          </div>
+          <div className='arrow w-2.5 h-2.5 relative bottom-[16.6px] right-[5px] rotate-45 bg-slate-100  '></div>
+        </div>
+      );
+    } else {
+      return <div className='empty w-6 h-6 ml-2.5'></div>;
+    }
   };
 
   return (
@@ -24,7 +39,13 @@ const Header = ({ open }) => {
             <Link to='/'>home</Link>
             <Link to='/Shop'>shop</Link>
             <Link to='/About'>about</Link>
-            <FiShoppingBag onClick={cart} className='text-2xl cursor-pointer' />
+            <div className='cart flex'>
+              <FiShoppingBag
+                onClick={cart}
+                className='text-2xl cursor-pointer'
+              />
+              {showPromp()}
+            </div>
           </nav>
         </div>
       </div>

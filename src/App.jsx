@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import About from "./components/About";
@@ -20,7 +20,9 @@ export default function App() {
   };
 
   const addItem = (item) => {
-    updateCart([...cart, item]);
+    if (!cart.includes(item)) {
+      updateCart([...cart, item]);
+    }
   };
 
   const removeItem = (i) => {
@@ -29,11 +31,8 @@ export default function App() {
     updateCart([...tempCart]);
   };
 
-  const totalVal = () => {
-    let totalI = cart.reduce((a, b) => {
-      return a + b.price * b.amt;
-    }, 0);
-    updateTotal(totalI);
+  const resetCart = () => {
+    updateCart([]);
   };
 
   useEffect(() => {
@@ -49,7 +48,6 @@ export default function App() {
       tempCart[i].amt += 1;
     }
     updateCart([...tempCart]);
-    console.log(totalVal());
   };
 
   const decreItem = (i) => {
@@ -71,9 +69,10 @@ export default function App() {
             decreItem={decreItem}
             increItem={increItem}
             removeItem={removeItem}
+            resetCart={resetCart}
           />
         ) : undefined}
-        <Header open={openCart} />
+        <Header open={openCart} items={cart.length} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route

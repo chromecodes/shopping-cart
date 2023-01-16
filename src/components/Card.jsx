@@ -9,11 +9,13 @@ const Card = ({ item, open, add }) => {
   };
 
   const shrink = (e) => {
-    if (e === "cardWindow") {
+    if (e === "cardWindow" || e === "add") {
       setaaa(!aaa);
     }
   };
-
+  const close = (e) => {
+    setaaa(!aaa);
+  };
   const window = {
     position: "absolute",
     height: "100vh",
@@ -80,7 +82,10 @@ const Card = ({ item, open, add }) => {
 
               <div className='buttons '>
                 <button
-                  onClick={addItem}
+                  onClick={(e) => {
+                    addItem();
+                    close();
+                  }}
                   className='add p-5 w-1/2 bg-zinc-800 '
                 >
                   Add to Cart
