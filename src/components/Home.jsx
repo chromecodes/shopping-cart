@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='home text-amber-100  h-screen w-screen bg-black'>
+      <div className='home text-amber-100 h-screen w-screen bg-black'>
         <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("./assets/bgs/bbb.png")]'>
           <div className='pt-64 pl-52'>
             <span className='text-slate-100 lights'>Lights</span>

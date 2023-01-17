@@ -75,3 +75,56 @@
   );
   backdrop-filter: blur(3rem);
 }
+.glasses {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  backdrop-filter: blur(0.5rem);
+}
+.frost {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+.yfrost {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 165, 48, 0.2) 0%,
+    rgba(255, 165, 48, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+.yfrostr {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 165, 48, 0.2) 0%,
+    rgba(255, 165, 48, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+.block {
+  background-color: #d977068a;
+}
+
+.Code:hover {
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0) scale(1.1);
+}
+.Code,
+.FaGithub {
+  transition: transform 0.5s ease-in-out;
+}
+.FaGithub:hover {
+  transform: rotate(720deg) scale(1.2);
+}
+
+.odin:hover {
+  transform: scale(1.2);
+}

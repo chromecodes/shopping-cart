@@ -15,7 +15,7 @@ const Header = ({ open, items }) => {
           <div className='block num  w-6 h-6 bg-slate-100 rounded text-black text-xl font-bold flex justify-center '>
             {items}
           </div>
-          <div className='arrow w-2.5 h-2.5 relative bottom-[16.6px] right-[5px] rotate-45 bg-slate-100  '></div>
+          <div className='arrow w-2.5 h-2.5 relative bottom-[16.6px] right-[5px] rotate-45 bg-slate-100 '></div>
         </div>
       );
     } else {
@@ -25,7 +25,7 @@ const Header = ({ open, items }) => {
 
   return (
     <>
-      <div className='header absolute '>
+      <div className='header absolute z-[1]'>
         <div className='h-24 text-slate-100 w-screen flex items-center justify-between'>
           <div className='logo  text-8xl pt-12 pl-16 font-medium leading-11 '>
             <span className='lights'>lights</span>

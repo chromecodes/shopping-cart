@@ -9,7 +9,7 @@ const Card = ({ item, open, add }) => {
   };
 
   const shrink = (e) => {
-    if (e === "cardWindow" || e === "add") {
+    if (e === "cardWindow z-[1]") {
       setaaa(!aaa);
     }
   };
@@ -55,9 +55,9 @@ const Card = ({ item, open, add }) => {
 
   return (
     <div className='card rounded-3xl '>
-      <div className='expandCard' style={aaa ? {} : hidden}>
+      <div className='expandCard ' style={aaa ? {} : hidden}>
         <div
-          className='cardWindow'
+          className='cardWindow z-[1]'
           style={aaa ? window : {}}
           onClick={(e) => {
             shrink(e.target.className);
