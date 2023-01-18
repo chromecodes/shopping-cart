@@ -30,30 +30,79 @@ const Home = () => {
     };
   });
 
+  const fromSideCnt = {
+    animate: {
+      transition: {
+        delayChildren: 0.6,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const fromSide = {
+    initial: {
+      y: 500,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 0.9,
+        ease: [0.43, 0.13, 0.23, 0.96],
+      },
+    },
+  };
+
   return (
     <>
-      <div className='home text-amber-100 h-screen w-screen bg-black'>
+      <div className='home text-amber-400 h-screen w-screen bg-black'>
         <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("./assets/bgs/bbb.png")]'>
-          <div className='pt-64 pl-52'>
-            <span className='text-slate-100 lights'>Lights</span>
-            <span className='a2 opacity-60'> up your</span>
-            <br />
-            <span className=' pl-24 b opacity-60'> paths of </span>
-            <motion.span
-              animate={control}
-              className='text-slate-100 opacity-20'
-            >
-              Dreams
-            </motion.span>
-          </div>
-          <motion.button
-            whileHover={{
-              textShadow: "0px 0px 20px #fff, 0px 0px 40px #fff",
-            }}
-            className='absolute left-1/4 bottom-44 text-3xl px-8 py-4 border-2 rounded-3xl border-neutral-700 '
+          <motion.div
+            variants={fromSideCnt}
+            initial='initial'
+            animate='animate'
+            className='pt-64 pl-52'
           >
-            <Link to='/shop'>shop now</Link>
-          </motion.button>
+            <div className='flex gap-5'>
+              <div className='overflow-hidden'>
+                <motion.div
+                  variants={fromSide}
+                  className='text-slate-100 lights'
+                >
+                  Lights
+                </motion.div>
+              </div>
+              <div className='overflow-hidden'>
+                <motion.div variants={fromSide} className='a2 opacity-60'>
+                  up your
+                </motion.div>
+              </div>
+            </div>
+            <div className='flex gap-5'>
+              <div className='overflow-hidden'>
+                <motion.div variants={fromSide} className=' pl-24 b opacity-60'>
+                  paths of
+                </motion.div>
+              </div>
+              <motion.div
+                variants={fromSide}
+                animate={control}
+                className='text-slate-100 opacity-20'
+              >
+                Dreams
+              </motion.div>
+            </div>
+          </motion.div>
+          <div className='overflow-hidden'>
+            <motion.button
+              className='ml-[25%] mt-28  bg-amber-400 text-[black] text-3xl px-8 py-4 border-2 rounded-3xl border-neutral-700 hover:bg-[black] hover:text-amber-400 hover:border-amber-400 hover:shadow-[0_0_15px_1px_rgba(255,165,48,0.8)] active:scale-90'
+              variants={fromSide}
+              initial='initial'
+              animate='animate'
+              transition={{ delay: 5 }}
+            >
+              <Link to='/shop'>shop now</Link>
+            </motion.button>
+          </div>
         </div>
       </div>
     </>
