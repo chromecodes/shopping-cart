@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { VscTag } from "react-icons/vsc";
 
@@ -54,7 +55,19 @@ const Card = ({ item, open, add }) => {
   };
 
   return (
-    <div className='card rounded-3xl '>
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 0.9,
+          ease: [0.43, 0.13, 0.23, 0.96],
+        },
+      }}
+      exit={{ opacity: 0 }}
+      className='card rounded-3xl '
+    >
       <div className='expandCard ' style={aaa ? {} : hidden}>
         <div
           className='cardWindow z-[1]'
@@ -118,7 +131,7 @@ const Card = ({ item, open, add }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

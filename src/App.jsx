@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import About from "./components/About";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
+import { AnimatePresence } from "framer-motion";
 
 export default function App() {
+  const location = useLocation();
   const [cart, updateCart] = useState([]);
   const [showCart, updateShowCart] = useState(false);
   const [total, updateTotal] = useState(0);
@@ -58,9 +60,10 @@ export default function App() {
     updateCart([...tempCart]);
   };
 
+  console.log(location);
   return (
     <>
-      <div className='app bg-slate-100'>
+      <div className='app bg-[rgb(200,200,200)]'>
         {showCart ? (
           <Cart
             close={closeCart}
@@ -72,15 +75,18 @@ export default function App() {
             resetCart={resetCart}
           />
         ) : undefined}
+
         <Header open={openCart} items={cart.length} />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route
-            path='/Shop'
-            element={<Shop open={openCart} add={addItem} />}
-          />
-          <Route path='/About' element={<About />} />
-        </Routes>
+        <AnimatePresence mode='wait'>
+          <Routes location={location} key={location.pathname}>
+            <Route path='/' element={<Home key={"home"} />} />
+            <Route
+              path='/Shop'
+              element={<Shop key={"shop"} open={openCart} add={addItem} />}
+            />
+            <Route path='/About' element={<About key={"about"} />} />
+          </Routes>
+        </AnimatePresence>
       </div>
     </>
   );

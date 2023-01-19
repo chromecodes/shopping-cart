@@ -51,6 +51,7 @@ const Header = ({ open, items }) => {
       },
     },
   };
+
   return (
     <>
       <div className='header absolute z-[1]'>
