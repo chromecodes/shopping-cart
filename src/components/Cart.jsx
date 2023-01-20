@@ -61,7 +61,7 @@ const Cart = ({
     <motion.div
       initial={"orgin"}
       animate={"present"}
-      className='cartCnt absolute flex h-screen w-screen bg-transparent z-[3] text-slate-200'
+      className='cartCnt absolute flex h-screen w-screen bg-transparent z-[2] text-slate-200'
     >
       <motion.div
         onClick={close}

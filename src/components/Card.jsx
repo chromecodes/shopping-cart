@@ -10,7 +10,7 @@ const Card = ({ item, open, add }) => {
   };
 
   const shrink = (e) => {
-    if (e === "cardWindow z-[1]") {
+    if (e === "cardWindow") {
       setaaa(!aaa);
     }
   };
@@ -26,6 +26,7 @@ const Card = ({ item, open, add }) => {
     background:
       "radial-gradient(circle, rgba(67,67,67,0.4) 0%, rgba(0,0,0,0.2) 100%)",
     backdropFilter: "blur(0.5rem)",
+    zIndex: "3",
   };
 
   const hidden = {
@@ -55,61 +56,45 @@ const Card = ({ item, open, add }) => {
   };
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: {
-          duration: 0.9,
-          ease: [0.43, 0.13, 0.23, 0.96],
-        },
-      }}
-      exit={{ opacity: 0 }}
-      className='card rounded-3xl '
-    >
-      <div className='expandCard ' style={aaa ? {} : hidden}>
+    <motion.div className='card rounded-3xl '>
+      <div
+        className='cardWindow'
+        style={aaa ? window : hidden}
+        onClick={(e) => {
+          shrink(e.target.className);
+        }}
+      >
         <div
-          className='cardWindow z-[1]'
-          style={aaa ? window : {}}
-          onClick={(e) => {
-            shrink(e.target.className);
-          }}
+          className='expandCard rounded-3xl flex '
+          style={aaa ? cardCnt : hidden}
         >
-          <div
-            className='expandCard rounded-3xl flex '
-            style={aaa ? cardCnt : hidden}
-          >
-            <img className='h-full rounded-l-3xl' src={item.imgs} alt='' />
-            <div className='sideCnt flex flex-col justify-between'>
-              <div className='top'>
-                <div className='name text-3xl text-zinc-600 p-5'>
-                  {item.type}
-                </div>
+          <img className='h-full rounded-l-3xl' src={item.imgs} alt='' />
+          <div className='sideCnt flex flex-col justify-between'>
+            <div className='top'>
+              <div className='name text-3xl text-zinc-600 p-5'>{item.type}</div>
 
-                <div className='name text-2xl pl-5'>{item.name}</div>
-                <div className='name text-base text-zinc-300 pl-5'>
-                  {item.des}
-                </div>
+              <div className='name text-2xl pl-5'>{item.name}</div>
+              <div className='name text-base text-zinc-300 pl-5'>
+                {item.des}
               </div>
+            </div>
 
-              <div className='buttons '>
-                <button
-                  onClick={(e) => {
-                    addItem();
-                    close();
-                  }}
-                  className='add p-5 w-1/2 bg-zinc-800 '
-                >
-                  Add to Cart
-                </button>
-                <button
-                  onClick={checkoutItem}
-                  className='out p-5 w-1/2 bg-slate-600 rounded-br-3xl '
-                >
-                  Checkout
-                </button>
-              </div>
+            <div className='buttons '>
+              <button
+                onClick={(e) => {
+                  addItem();
+                  close();
+                }}
+                className='add p-5 w-1/2 bg-zinc-800 '
+              >
+                Add to Cart
+              </button>
+              <button
+                onClick={checkoutItem}
+                className='out p-5 w-1/2 bg-slate-600 rounded-br-3xl '
+              >
+                Checkout
+              </button>
             </div>
           </div>
         </div>

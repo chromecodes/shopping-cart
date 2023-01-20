@@ -62,32 +62,29 @@ export default function App() {
 
   console.log(location);
   return (
-    <>
-      <div className='app bg-[rgb(200,200,200)]'>
-        {showCart ? (
-          <Cart
-            close={closeCart}
-            cart={cart}
-            total={total}
-            decreItem={decreItem}
-            increItem={increItem}
-            removeItem={removeItem}
-            resetCart={resetCart}
+    <div className='app'>
+      {showCart ? (
+        <Cart
+          close={closeCart}
+          cart={cart}
+          total={total}
+          decreItem={decreItem}
+          increItem={increItem}
+          removeItem={removeItem}
+          resetCart={resetCart}
+        />
+      ) : undefined}
+      <Header open={openCart} items={cart.length} />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<Home />} />
+          <Route
+            path='/Shop'
+            element={<Shop open={openCart} add={addItem} />}
           />
-        ) : undefined}
-
-        <Header open={openCart} items={cart.length} />
-        <AnimatePresence mode='wait'>
-          <Routes location={location} key={location.pathname}>
-            <Route path='/' element={<Home key={"home"} />} />
-            <Route
-              path='/Shop'
-              element={<Shop key={"shop"} open={openCart} add={addItem} />}
-            />
-            <Route path='/About' element={<About key={"about"} />} />
-          </Routes>
-        </AnimatePresence>
-      </div>
-    </>
+          <Route path='/About' element={<About />} />
+        </Routes>
+      </AnimatePresence>
+    </div>
   );
 }
