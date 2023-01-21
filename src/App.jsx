@@ -6,11 +6,16 @@ import About from "./components/About";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 import { AnimatePresence } from "framer-motion";
+import Cardexp from "./components/Cardexp";
+import { FaBullseye } from "react-icons/fa";
 
 export default function App() {
   const location = useLocation();
   const [cart, updateCart] = useState([]);
   const [showCart, updateShowCart] = useState(false);
+  const [cardExd, updateCardExd] = useState(false);
+  const [crrtCard, updateCrrtCard] = useState();
+
   const [total, updateTotal] = useState(0);
 
   const openCart = () => {
@@ -60,7 +65,19 @@ export default function App() {
     updateCart([...tempCart]);
   };
 
-  console.log(location);
+  const expandCard = (i) => {
+    console.log(i);
+    updateCardExd(true);
+    updateCrrtCard(i);
+  };
+  const shrinkCard = () => {
+    updateCardExd(false);
+  };
+
+  useEffect(() => {
+    console.log(crrtCard);
+  }, [crrtCard]);
+
   return (
     <div className='app'>
       {showCart ? (
@@ -74,14 +91,19 @@ export default function App() {
           resetCart={resetCart}
         />
       ) : undefined}
+      {cardExd ? (
+        <Cardexp
+          item={crrtCard}
+          shrinkCard={shrinkCard}
+          add={addItem}
+          open={openCart}
+        />
+      ) : undefined}
       <Header open={openCart} items={cart.length} />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
-          <Route
-            path='/Shop'
-            element={<Shop open={openCart} add={addItem} />}
-          />
+          <Route path='/Shop' element={<Shop expandCard={expandCard} />} />
           <Route path='/About' element={<About />} />
         </Routes>
       </AnimatePresence>

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Item from "./Item";
 import { Link } from "react-router-dom";
+import { RiCloseFill } from "react-icons/ri";
 
 const Cart = ({
   close,
@@ -58,53 +59,70 @@ const Cart = ({
     },
   };
   return (
-    <motion.div
-      initial={"orgin"}
-      animate={"present"}
-      className='cartCnt absolute flex h-screen w-screen bg-transparent z-[2] text-slate-200'
-    >
+    <AnimatePresence>
       <motion.div
-        onClick={close}
-        variants={cartWinOpen}
-        transition={{
-          duration: 0.1,
-          ease: [0.51, 0.92, 0.24, 1.15],
-        }}
-        className='cartWindow w-3/5'
-      ></motion.div>
-
-      <motion.div
-        variants={cartOpen}
-        transition={{
-          duration: 0.05,
-          ease: [0.51, 0.92, 0.24, 1.15],
-        }}
-        className='cart w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
+        initial={"orgin"}
+        animate={"present"}
+        exit={"orgin"}
+        className='cartCnt absolute flex h-screen w-screen bg-transparent z-[4] text-slate-200'
       >
-        <div className='cartName  pl-10 text-5xl font-inherit'>Your Cart</div>
-        <div className='cartItems flex grow flex-wrap gap-y-5 w-[90%]'>
-          {displayItems()}
-        </div>
-        <div className='total text-4xl '>
-          Total : <span className='num font-bold'>{total}</span>
-        </div>
+        <motion.div
+          onClick={close}
+          variants={cartWinOpen}
+          transition={{
+            duration: 0.1,
+            ease: [0.51, 0.92, 0.24, 1.15],
+          }}
+          className='cartWindow w-3/5'
+        ></motion.div>
 
-        <motion.button
-          onClick={() => {
-            if (cart.length > 0) {
-              resetCart();
-            }
+        <motion.div
+          variants={cartOpen}
+          transition={{
+            duration: 0.05,
+            ease: [0.51, 0.92, 0.24, 1.15],
           }}
-          whileTap={{ scale: "0.9" }}
-          whileHover={{
-            boxShadow: "0px 0px 10px 0px #fcd34d",
-          }}
-          className='out bg-Black text-amber-200 text-4xl rounded-2xl border border-amber-200 w-64 p-5'
+          className='cart w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
         >
-          {cart.length > 0 ? "Checkout" : <Link to='/shop'> Shop</Link>}
-        </motion.button>
+          <div className='toper flex justify-between w-full '>
+            <div className='cartName pl-6 text-5xl font-inherit'>Your Cart</div>
+            <RiCloseFill
+              onClick={close}
+              className=' h-10 w-10 text-zinc-500 cursor-pointer'
+            />
+          </div>
+
+          <div className='cartItems flex grow flex-wrap gap-y-5 w-[90%]'>
+            {displayItems()}
+          </div>
+          <div className='total text-4xl '>
+            Total : <span className='num font-bold'>{total}</span>
+          </div>
+
+          <motion.button
+            onClick={() => {
+              if (cart.length > 0) {
+                resetCart();
+                close();
+              }
+            }}
+            whileTap={{ scale: "0.9" }}
+            whileHover={{
+              boxShadow: "0px 0px 10px 0px #fcd34d",
+            }}
+            className='out bg-Black text-amber-200 text-4xl rounded-2xl border border-amber-200 w-64 p-5'
+          >
+            {cart.length > 0 ? (
+              "Checkout"
+            ) : (
+              <Link onClick={close} to='/shop'>
+                Shop
+              </Link>
+            )}
+          </motion.button>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </AnimatePresence>
   );
 };
 

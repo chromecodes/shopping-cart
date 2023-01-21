@@ -11,13 +11,13 @@ const grow = {
   hover: { width: "112px" },
 };
 
-const Shop = ({ open, add }) => {
+const Shop = ({ open, add, expandCard }) => {
   const [items, setItems] = useState([...Products]);
   const [current, setCurrent] = useState("All Products");
 
   const createItem = () => {
     return items.map((item) => {
-      return <Card item={item} open={open} add={add} />;
+      return <Card item={item} open={open} add={add} expandCard={expandCard} />;
     });
   };
 
@@ -62,18 +62,7 @@ const Shop = ({ open, add }) => {
       },
     },
   };
-  const fromBottom = {
-    initial: {
-      y: 200,
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: [0.43, 0.13, 0.23, 0.96],
-      },
-    },
-  };
+
   const fade = {
     initial: {
       opacity: 0,
@@ -90,13 +79,13 @@ const Shop = ({ open, add }) => {
   return (
     <>
       <motion.div
-        // initial={{ y: "100%" }}
-        // animate={{ y: "0%" }}
-        // exit={{ y: "100%" }}
-        // transition={{
-        //   duration: 0.5,
-        //   ease: [0.43, 0.13, 0.23, 0.96],
-        // }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: [0.43, 0.13, 0.23, 0.96],
+        }}
         className='shop relative z-[1] text-slate-100 pt-32 flex h-screen w-screen bg-black-100'
       >
         <motion.div
@@ -166,7 +155,12 @@ const Shop = ({ open, add }) => {
 
         <div className='shelf text-2xl w-4/5 h-full'>
           <div className='mt-8 pl-12 border-l-2 border-zinc-800 h-[95%] '>
-            <motion.div className='cardContainer flex gap-12 flex-wrap h-full'>
+            <motion.div
+              variants={fromCnt}
+              initial='initial'
+              animate='animate'
+              className='cardContainer flex gap-12 flex-wrap h-full'
+            >
               {createItem()}
             </motion.div>
           </div>

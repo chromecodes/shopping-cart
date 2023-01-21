@@ -58,7 +58,7 @@ const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+        transition={{ duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] }}
         className='home text-amber-400 h-screen w-screen bg-black'
       >
         <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("./assets/bgs/bbb.png")]'>

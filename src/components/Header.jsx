@@ -53,7 +53,7 @@ const Header = ({ open, items }) => {
 
   return (
     <>
-      <div className='header fixed z-[2]'>
+      <div className='header absolute z-[2]'>
         <div className='h-24 text-slate-100 w-screen flex items-center justify-between'>
           <motion.div
             initial={{ opacity: 0 }}
