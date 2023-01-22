@@ -101,29 +101,27 @@ const About = () => {
       >
         <motion.div className='w-full h-full grid grid-cols-4 grid-rows-4'>
           <motion.div className='leftAt row-span-3 flex flex-col items-center text-4xl'>
-            <motion.div className='line grow mt-32 w-full flex flex-col items-center yfrost'>
-              <motion.div className='l1'>Your</motion.div>
+            <motion.div className='line grow w-full flex flex-col justify-center items-center yfrost'>
+              <motion.div className='l1'></motion.div>
               <motion.div className='l2 text-2xl w-72 text-center '>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                officia consequatur maxime harum consectetur alias, quasi hic
-                adipisci corrupti facere enim tenetur odio laudantium tempora
-                recusandae illum in dolorem blanditiis?
+                “Hope is being able to see that there is light despite all of
+                the darkness.” <br /> — Desmond Tutu
               </motion.div>
             </motion.div>
           </motion.div>
           <div className='ltbtAt yfrost block row-4'>
-            <div className='w-full h-full p-5 flex justify-center items-end'>
+            <div className='w-full h-full text-2xl p-5 flex flex-col justify-end items-center'>
               <div className='overflow-hidden pt-2 pr-2'>
                 <motion.div
                   variants={fromBottom}
                   animate='animate'
                   initial='initial'
-                  className='links text-2xl flex flex-wrap gap-x-1.5'
+                  className='links flex flex-wrap gap-x-1.5'
                 >
                   The
                   <motion.a
                     href='https://www.theodinproject.com/'
-                    className='odin text-amber-400'
+                    className='odin text-amber-500'
                   >
                     Odin
                   </motion.a>
@@ -135,6 +133,16 @@ const About = () => {
                   <a href='https://github.com/chromecodes'>
                     <FaGithub className='FaGithub' />
                   </a>
+                </motion.div>
+              </div>
+              <div className='overflow-hidden'>
+                <motion.div
+                  variants={fromBottom}
+                  animate='animate'
+                  initial='initial'
+                  className='credit text-amber-500'
+                >
+                  Credits
                 </motion.div>
               </div>
             </div>
@@ -152,8 +160,7 @@ const About = () => {
               <div className='mid w-1/3 flex '>
                 <div className='news text-xl '>
                   <div className='l1'>Join our</div>
-                  <label htmlFor='email '>News letter</label>
-
+                  <label htmlFor='email'>News letter</label>
                   <div className=' mailCnt text-xl pt-2 rounded-xl flex'>
                     <input
                       className='px-3 border-2 text-zinc-900 border-amber-600 rounded-l-xl focus:outline-none'

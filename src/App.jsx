@@ -15,8 +15,8 @@ export default function App() {
   const [showCart, updateShowCart] = useState(false);
   const [cardExd, updateCardExd] = useState(false);
   const [crrtCard, updateCrrtCard] = useState();
-
   const [total, updateTotal] = useState(0);
+  const [thank, updateThank] = useState(false);
 
   const openCart = () => {
     updateShowCart(true);
@@ -98,6 +98,11 @@ export default function App() {
           add={addItem}
           open={openCart}
         />
+      ) : undefined}
+      {thank ? (
+        <div className='thankCnt'>
+          <div className='thank'></div>
+        </div>
       ) : undefined}
       <Header open={openCart} items={cart.length} />
       <AnimatePresence mode='wait'>
