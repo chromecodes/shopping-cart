@@ -148,7 +148,17 @@ const About = () => {
             </div>
           </div>
 
-          <div className='midAt  row-span-3 col-span-3'> </div>
+          <div className='midAt  row-span-3 col-span-3'>
+            {" "}
+            Photo by{" "}
+            <a href='https://unsplash.com/fr/@beazy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+              Beazy
+            </a>{" "}
+            on{" "}
+            <a href='https://unsplash.com/photos/toX2sYnycCw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+              Unsplash
+            </a>{" "}
+          </div>
           <div className='bttmAt text-3xl glasses col-span-3'>
             <motion.div
               variants={fade}

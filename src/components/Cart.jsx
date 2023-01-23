@@ -11,7 +11,7 @@ const Cart = ({
   removeItem,
   increItem,
   decreItem,
-  resetCart,
+  sayThanks,
 }) => {
   const displayItems = () => {
     if (cart.length === 0) {
@@ -102,8 +102,8 @@ const Cart = ({
           <motion.button
             onClick={() => {
               if (cart.length > 0) {
-                resetCart();
                 close();
+                sayThanks();
               }
             }}
             whileTap={{ scale: "0.9" }}

@@ -17,6 +17,7 @@ export default function App() {
   const [crrtCard, updateCrrtCard] = useState();
   const [total, updateTotal] = useState(0);
   const [thank, updateThank] = useState(false);
+  const [credits, updateCredits] = useState(false);
 
   const openCart = () => {
     updateShowCart(true);
@@ -70,6 +71,7 @@ export default function App() {
     updateCardExd(true);
     updateCrrtCard(i);
   };
+
   const shrinkCard = () => {
     updateCardExd(false);
   };
@@ -77,6 +79,11 @@ export default function App() {
   useEffect(() => {
     console.log(crrtCard);
   }, [crrtCard]);
+
+  const sayThanks = () => {
+    updateThank(true);
+    updateCart([]);
+  };
 
   return (
     <div className='app'>
@@ -88,7 +95,7 @@ export default function App() {
           decreItem={decreItem}
           increItem={increItem}
           removeItem={removeItem}
-          resetCart={resetCart}
+          sayThanks={sayThanks}
         />
       ) : undefined}
       {cardExd ? (
@@ -100,8 +107,15 @@ export default function App() {
         />
       ) : undefined}
       {thank ? (
-        <div className='thankCnt'>
-          <div className='thank'></div>
+        <div
+          onClick={() => {
+            updateThank(false);
+          }}
+          className='thankCnt absolute w-screen h-screen glasses z-[3] flex justify-center items-center'
+        >
+          <div className='thank text-4xl p-6 text-center rounded-3xl text-zinc-600 w-1/3 h-1/3 bg-zinc-900 flex justify-center items-center'>
+            Thank you for checking out my project.
+          </div>
         </div>
       ) : undefined}
       <Header open={openCart} items={cart.length} />

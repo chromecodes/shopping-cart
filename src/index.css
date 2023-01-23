@@ -53,7 +53,8 @@
 }
 .cartCnt,
 .expandCard,
-.about {
+.about,
+.thankCnt {
   font-family: sss;
 }
 .num {
