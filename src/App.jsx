@@ -8,6 +8,7 @@ import Cart from "./components/Cart";
 import { AnimatePresence } from "framer-motion";
 import Cardexp from "./components/Cardexp";
 import { FaBullseye } from "react-icons/fa";
+import Credits from "./components/Credits";
 
 export default function App() {
   const location = useLocation();
@@ -85,6 +86,12 @@ export default function App() {
     updateCart([]);
   };
 
+  const showCredits = () => {
+    updateCredits(true);
+  };
+  const hideCredits = () => {
+    updateCredits(false);
+  };
   return (
     <div className='app'>
       {showCart ? (
@@ -118,12 +125,13 @@ export default function App() {
           </div>
         </div>
       ) : undefined}
+      {credits ? <Credits hideCredits={hideCredits} /> : undefined}
       <Header open={openCart} items={cart.length} />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
           <Route path='/Shop' element={<Shop expandCard={expandCard} />} />
-          <Route path='/About' element={<About />} />
+          <Route path='/About' element={<About showCredits={showCredits} />} />
         </Routes>
       </AnimatePresence>
     </div>
