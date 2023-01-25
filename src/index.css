@@ -54,8 +54,12 @@
 .cartCnt,
 .expandCard,
 .about,
-.thankCnt {
+.thankCnt,
+.credit {
   font-family: sss;
+}
+.credit > li > a {
+  color: #d977068a;
 }
 .num {
   font-family: aaa;
