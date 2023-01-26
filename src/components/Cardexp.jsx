@@ -76,7 +76,7 @@ const Cardexp = ({ item, shrinkCard, open, add }) => {
         >
           <motion.div
             variants={grow}
-            className='expandCard  text-2xl rounded-3xl flex '
+            className='expandCard text-2xl rounded-3xl flex '
             style={cardCnt}
           >
             <img className='h-full rounded-l-3xl' src={item.imgs} alt='' />

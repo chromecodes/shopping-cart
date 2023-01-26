@@ -6,23 +6,23 @@
 
 @font-face {
   font-family: neon2;
-  src: url(./assets/Bastinsondemo-MV57n.otf);
+  src: url(./assets/fonts/Bastinsondemo-MV57n.otf);
 }
 @font-face {
   font-family: aaa;
-  src: url(./assets/Carry-You.ttf);
+  src: url(./assets/fonts/Carry-You.ttf);
 }
 @font-face {
   font-family: font4;
-  src: url(./assets/SunsetClubFreeTrial-2ODpw.otf);
+  src: url(./assets/fonts/SunsetClubFreeTrial-2ODpw.otf);
 }
 @font-face {
   font-family: ll;
-  src: url(./assets/LovelineGlamour-owdE0.ttf);
+  src: url(./assets/fonts/LovelineGlamour-owdE0.ttf);
 }
 @font-face {
   font-family: sss;
-  src: url(./assets/ShiftyNotesRegular-BWZ6d.ttf);
+  src: url(./assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
 }
 
 #root {
