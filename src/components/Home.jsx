@@ -61,12 +61,12 @@ const Home = () => {
         transition={{ duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] }}
         className='home text-amber-400 h-screen w-screen bg-black'
       >
-        <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("./assets/img/bg/bgHome.png")]'>
+        <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("./assets/img/bg/bgHomeMb.png")] lg:bg-[url("./assets/img/bg/bgHome.png")]'>
           <motion.div
             variants={fromSideCnt}
             initial='initial'
             animate='animate'
-            className='pt-64 pl-52'
+            className='text-4xl pl-16 pt-48 md:pt-56 md:pl-36 md:text-7xl lg:pt-64 lg:pl-28'
           >
             <div className='flex gap-5'>
               <div className='overflow-hidden'>
@@ -98,10 +98,10 @@ const Home = () => {
               </motion.div>
             </div>
           </motion.div>
-          <div className='ml-[25%] mt-28 w-[15%] h-24 flex justify-center items-center overflow-hidden'>
+          <div className='w-[60%] ml-[25%] mt-8 lg:mt-28 lg:w-[25%] h-24 flex justify-center items-center overflow-hidden'>
             <motion.button
               variants={fromSide}
-              className='bg-amber-400 text-[black] text-4xl px-8 py-4 border-2 rounded-3xl border-neutral-700 hover:bg-[black] hover:text-amber-400 hover:border-amber-400 hover:shadow-[0_0_15px_1px_rgba(255,165,48,0.8)] active:scale-90'
+              className='lg:text-4xl text-2xl bg-amber-400 text-[black]  px-8 py-4 border-2 rounded-3xl border-neutral-700 hover:bg-[black] hover:text-amber-400 hover:border-amber-400 hover:shadow-[0_0_15px_1px_rgba(255,165,48,0.8)] active:scale-90'
               initial={{
                 y: 500,
               }}

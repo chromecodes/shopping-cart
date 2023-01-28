@@ -16,7 +16,10 @@ const Cart = ({
   const displayItems = () => {
     if (cart.length === 0) {
       return (
-        <div className='text-6xl text-center w-full'> Your Cart is Empty</div>
+        <div className='text-4xl lg:text-6xl text-center w-full'>
+          {" "}
+          Your Cart is Empty
+        </div>
       );
     }
     return cart.map((item, index) => {
@@ -73,7 +76,7 @@ const Cart = ({
             duration: 0.1,
             ease: [0.51, 0.92, 0.24, 1.15],
           }}
-          className='cartWindow w-3/5'
+          className='cartWindow w-[0%] lg:w-3/5'
         ></motion.div>
 
         <motion.div
@@ -82,20 +85,20 @@ const Cart = ({
             duration: 0.05,
             ease: [0.51, 0.92, 0.24, 1.15],
           }}
-          className='cart w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
+          className='cart w-full lg:w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
         >
           <div className='toper flex justify-between w-full '>
-            <div className='cartName pl-6 text-5xl font-inherit'>Your Cart</div>
+            <div className='cartName pl-6 text-4xl lg:text-5xl font-inherit'>
+              Your Cart
+            </div>
             <RiCloseFill
               onClick={close}
               className=' h-10 w-10 text-zinc-500 cursor-pointer'
             />
           </div>
 
-          <div className='cartItems flex grow flex-wrap gap-y-5 w-[90%]'>
-            {displayItems()}
-          </div>
-          <div className='total text-4xl '>
+          <div className='cartItems flex grow w-[90%]'>{displayItems()}</div>
+          <div className='total text-2xl lg:text-4xl '>
             Total : <span className='num font-bold'>{total}</span>
           </div>
 
@@ -110,7 +113,7 @@ const Cart = ({
             whileHover={{
               boxShadow: "0px 0px 10px 0px #fcd34d",
             }}
-            className='out bg-Black text-amber-200 text-4xl rounded-2xl border border-amber-200 w-64 p-5'
+            className='out bg-Black text-amber-200 text-2xl lg:text-4xl rounded-2xl border border-amber-200 w-[64%] p-2 lg:p-5'
           >
             {cart.length > 0 ? (
               "Checkout"

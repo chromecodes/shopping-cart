@@ -8,10 +8,10 @@ const Cardexp = ({ item, shrinkCard, open, add }) => {
     width: "100vw",
     top: "0",
     left: "0",
-    // background:
-    //   "radial-gradient(circle, rgba(67,67,67,0.4) 0%, rgba(0,0,0,0.2) 100%)",
-    // backdropFilter: "blur(0.5rem)",
     zIndex: "3",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
   const cardCnt = {
     position: "relative",
@@ -76,20 +76,18 @@ const Cardexp = ({ item, shrinkCard, open, add }) => {
         >
           <motion.div
             variants={grow}
-            className='expandCard text-2xl rounded-3xl flex '
-            style={cardCnt}
+            className='expandCard relative h-[35%] w-[85%] md:h-[40%] md:w-[65%] lg:h-[50%] xl:w-[40%] text-2xl rounded-3xl flex bg-zinc-900'
           >
-            <img className='h-full rounded-l-3xl' src={item.imgs} alt='' />
+            <img className='h lg:h-full rounded-l-3xl' src={item.imgs} alt='' />
             <div className='sideCnt flex flex-col justify-between'>
               <div className='top'>
-                <div className='name text-3xl  text-zinc-600 p-5'>
+                <div className='name xl:text-3xl  md:text-xl text-xl xl:pt-5 xl:pt-3 pl-3 pt-1   text-zinc-600 '>
                   {item.type}
                 </div>
-
-                <div className='name text-2xl text-slate-500  pl-5 pb-2'>
+                <div className='name xl:text-3xl md:text-xl text-lg text-slate-500 xl:pl-5 xl:pb-3 pl-3 pb-1'>
                   {item.name}
                 </div>
-                <div className='name text-base text-zinc-300 pl-5'>
+                <div className='name xl:text-3xl md:text-xl text-sm text-base  text-zinc-300 pl-3 '>
                   {item.des}
                 </div>
               </div>
@@ -99,13 +97,13 @@ const Cardexp = ({ item, shrinkCard, open, add }) => {
                     addItem();
                     shrinkCard();
                   }}
-                  className='add p-5 w-1/2 bg-zinc-800 '
+                  className='add xl:text-3xl md:text-xl text-lg p-2 xl:p-5 w-1/2 bg-zinc-800 '
                 >
                   Add to Cart
                 </button>
                 <button
                   onClick={checkoutItem}
-                  className='out p-5 w-1/2 bg-slate-600 rounded-br-3xl '
+                  className='out xl:text-3xl md:text-xl text-lg p-2 xl:p-5 w-1/2 bg-slate-600 rounded-br-3xl '
                 >
                   Checkout
                 </button>

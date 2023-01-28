@@ -23,7 +23,7 @@ const Card = ({ item, open, add, expandCard }) => {
     <div className='overflow-hidden'>
       <motion.div variants={fromBottom} className='card rounded-3xl '>
         <div className='shrinkCard cursor-pointer'>
-          <div className='w-56 rounded-3xl '>
+          <div className='w-28 rounded-3xl '>
             <img
               onClick={expand}
               className='rounded-t-3xl'
@@ -31,7 +31,7 @@ const Card = ({ item, open, add, expandCard }) => {
               alt={item.name}
             />
           </div>
-          <div className='bg-zinc-900 p-3  w-56 text-xl rounded-b-2xl'>
+          <div className='bg-zinc-900 p-3 h-24 w-28 text-xl rounded-b-2xl'>
             <div className='t'> {item.name} </div>
             <div className='num font-bold flex gap-x-2 justify-end'>
               <VscTag /> {item.price}

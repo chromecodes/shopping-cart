@@ -6,11 +6,11 @@ import { RiCloseCircleFill } from "react-icons/ri";
 const Item = ({ item, i, removeItem, increItem, decreItem }) => {
   return (
     <>
-      <div className='itemCnt h-36 flex justify-between w-[95%]'>
-        <img className='img  rounded-full' src={item.img} />
+      <div className='itemCnt h-24 md:h-36 flex justify-between w-[95%]'>
+        <img className='img rounded-full' src={item.img} />
         <div className='detail flex flex-col gap-1'>
-          <div className='name text-4xl w-58'>{item.name} </div>
-          <div className='num flex gap-4 text-2xl font-semibold justify-end'>
+          <div className='name text-2xl md:text-4xl w-58'>{item.name} </div>
+          <div className='num flex gap-4 text-xl md:text-2xl font-semibold justify-end'>
             <VscTag /> {item.price}
           </div>
           <div className='counter flex gap-4 text-3xl items-center justify-center'>
@@ -22,7 +22,7 @@ const Item = ({ item, i, removeItem, increItem, decreItem }) => {
                 className='pr-1'
               />
             </button>
-            <div className='itemAmt text-2xl'>{item.amt} </div>
+            <div className='itemAmt text-xl md:text-2xl'>{item.amt} </div>
             <button className='incr glass rounded-full'>
               <IoIosArrowForward
                 onClick={() => {

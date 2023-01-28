@@ -9,7 +9,7 @@ const Credits = ({ hideCredits }) => {
       }}
       className='creditCnt absolute w-screen h-screen glasses z-[3] flex justify-center items-center'
     >
-      <div className='credit text-4xl p-8 rounded-3xl text-zinc-600 w-2/4 h-4/5 bg-zinc-900  '>
+      <div className='md:w-3/5 md:text-3xl credit text-2xl w-[95%] p-8 rounded-3xl text-zinc-600  h-4/5 bg-zinc-900  '>
         <div className='w-full h-full'>
           <div className='l1 flex justify-between'>
             <span>Credits</span>
@@ -19,9 +19,9 @@ const Credits = ({ hideCredits }) => {
             />
           </div>
           <div className='l2 h-[90%]'>
-            <div className='pl-5 nums1 text-3xl'>
+            <div className='pl-5 nums1 md:text-2xl text-xl'>
               Backgrounds
-              <ol className='credit pl-5 text-2xl overflow-y-scroll grid grid-cols-2 '>
+              <ol className='credit md:text-xl pl-5 text-lg overflow-y-scroll grid grid-cols-2 '>
                 <li>
                   Image by{" "}
                   <a href='https://pixabay.com/users/vy-18861/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=76124'>
@@ -45,9 +45,9 @@ const Credits = ({ hideCredits }) => {
                 </li>{" "}
               </ol>
             </div>
-            <div className='pl-5 h-[90%] nums1 text-3xl'>
+            <div className=' md:text-2xl pl-5 h-[90%] nums1 text-xl'>
               Items
-              <ol className='credit pl-5 text-2xl h-[95%] overflow-y-scroll grid grid-cols-2 '>
+              <ol className='credit  md:text-xl pl-5 text-lg h-[89%] overflow-y-scroll gap-1 grid grid-cols-2 '>
                 <li>
                   Photo by{" "}
                   <a href='https://unsplash.com/fr/@beazy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>

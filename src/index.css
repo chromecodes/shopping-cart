@@ -45,7 +45,7 @@
 .home,
 .about {
   font-family: sss;
-  font-size: 72px;
+  /* font-size: 72px; */
 }
 .shop {
   background-color: black;

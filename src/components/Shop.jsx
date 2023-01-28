@@ -86,23 +86,26 @@ const Shop = ({ open, add, expandCard }) => {
           duration: 0.3,
           ease: [0.43, 0.13, 0.23, 0.96],
         }}
-        className='shop relative z-[1] text-slate-100 pt-32 flex h-screen w-screen bg-black-100'
+        className='shop relative z-[1] text-slate-100 pt-16 md:pt-32 flex flex-col md:flex-row h-screen w-screen bg-black-100'
       >
         <motion.div
           variants={fromCnt}
           animate='animate'
           initial='initial'
           transition='transition'
-          className='mt-8 catgories text-xl  w-1/5 '
+          className='mt-8 catgories text-xl w-full md:w-1/5 '
         >
           <div className='overflow-hidden'>
-            <motion.div variants={fromTop} className='text-4xl text-zinc-700'>
+            <motion.div
+              variants={fromTop}
+              className='xl:text-4xl md:text-3xl text-2xl text-zinc-700'
+            >
               Shop
             </motion.div>
           </div>
 
           <motion.div>
-            <div className='text-3xl pl-12 flex'>
+            <div className='xl:text-3xl md:text-2xl text-xl pl-12 flex'>
               <div className='w-6 overflow-hidden'>
                 <motion.div variants={fromLeft} transition={{ duration: 0.2 }}>
                   /
@@ -115,14 +118,14 @@ const Shop = ({ open, add, expandCard }) => {
 
             <motion.div
               variants={fade}
-              className='mt-8 pr-5 text-3xl flex flex-col items-end gap-y-5'
+              className=' md:mt-8 pr-5 flex md:pl pl-28 md:flex-col items-end gap-y-5'
             >
               <motion.div whileHover='hover' initial='rest' animate='rest'>
                 <div
                   onClick={() => {
                     filterItems("Lamp");
                   }}
-                  className='w-28 cursor-pointer'
+                  className='w-28 cursor-pointer xl:text-3xl md:text-2xl text-xl md:text-left text-center'
                 >
                   lamps
                 </div>
@@ -138,7 +141,7 @@ const Shop = ({ open, add, expandCard }) => {
                   onClick={() => {
                     filterItems("Light");
                   }}
-                  className='w-28 cursor-pointer'
+                  className='w-28 cursor-pointer xl:text-3xl md:text-2xl text-xl md:text-left text-center'
                 >
                   lights
                 </div>
@@ -153,13 +156,13 @@ const Shop = ({ open, add, expandCard }) => {
           </motion.div>
         </motion.div>
 
-        <div className='shelf text-2xl w-4/5 h-full'>
-          <div className='mt-8 pl-12 border-l-2 border-zinc-800 h-[95%] '>
+        <div className='shelf text-2xl w-full h-4/5 md:w-4/5 md:h-[99.5%]'>
+          <div className='mt-2 md:mt-8 pl-6 md:pl-12 border-l-2 border-zinc-800 h-[99%] '>
             <motion.div
               variants={fromCnt}
               initial='initial'
               animate='animate'
-              className='cardContainer flex gap-12 flex-wrap h-full'
+              className='cardContainer flex xl:gap-12 md:gap-6 gap-4 flex-wrap h-full'
             >
               {createItem()}
             </motion.div>

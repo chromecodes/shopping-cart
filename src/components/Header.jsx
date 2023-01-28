@@ -54,12 +54,12 @@ const Header = ({ open, items }) => {
   return (
     <>
       <div className='header absolute z-[2]'>
-        <div className='h-24 text-slate-100 w-screen flex items-center justify-between'>
+        <div className='h-24 text-slate-100 w-screen flex items-center justify-between sm:flex-row'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={transition}
-            className='logo  text-8xl pt-12 pl-16 font-medium leading-11 '
+            className='logo pt-6 pl-8 text-6xl font-medium leading-7 md:pt-12 lg:pl-16 md:text-8xl md:leading-11'
           >
             <span className='lights'>lights</span>
             <span className='text-slate-300'>&</span>
@@ -72,7 +72,7 @@ const Header = ({ open, items }) => {
             variants={linksCnt}
             initial='initial'
             animate='animate'
-            className='nav flex gap-16 text-2xl pr-28 text-slate-300 '
+            className='nav flex gap-6 text-xl pr-4 lg:pr-28 md:text-2xl md:gap-16 text-slate-300 '
           >
             <div className='overflow-hidden'>
               <motion.div variants={links}>

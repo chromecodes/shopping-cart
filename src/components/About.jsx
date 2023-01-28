@@ -99,40 +99,44 @@ const About = ({ showCredits }) => {
         }}
         className='about text-slate-100 h-screen w-screen bg-cover bg-[url("./assets/img/bg/bgAbout.png")] '
       >
-        <motion.div className='w-full h-full grid grid-cols-4 grid-rows-4'>
+        <motion.div className='w-full h-full grid  grid-cols-3 lg:grid-cols-4 grid-rows-4'>
           <motion.div className='leftAt row-span-3 flex flex-col items-center text-4xl'>
             <motion.div className='line grow w-full flex flex-col justify-center items-center yfrost'>
               <motion.div className='l1'></motion.div>
-              <motion.div className='l2 text-2xl w-72 text-center '>
+              <motion.div className='l2 text-xl md:text-2xl w-[80%] text-center '>
                 “Hope is being able to see that there is light despite all of
                 the darkness.” <br /> — Desmond Tutu
               </motion.div>
             </motion.div>
           </motion.div>
-          <div className='ltbtAt yfrost block row-4'>
-            <div className='w-full h-full text-2xl p-5 flex flex-col justify-end items-center'>
-              <div className='overflow-hidden pt-2 pr-2'>
+          <div className='ltbtAt yfrost block lg:row-4'>
+            <div className='w-full h-full text-xl md:text-2xl p-5 flex flex-col justify-end items-center'>
+              <div className='overflow-hidden p-2'>
                 <motion.div
                   variants={fromBottom}
                   animate='animate'
                   initial='initial'
-                  className='links flex flex-wrap gap-x-1.5'
+                  className='links flex xl:flex-row flex-col items-center gap-x-1.5'
                 >
-                  The
-                  <motion.a
-                    href='https://www.theodinproject.com/'
-                    className='odin text-amber-500'
-                  >
-                    Odin
-                  </motion.a>
-                  Project
-                  <a href='https://github.com/chromecodes/shopping-cart'>
-                    <BiCodeAlt className='Code' />
-                  </a>
-                  chromecodes
-                  <a href='https://github.com/chromecodes'>
-                    <FaGithub className='FaGithub' />
-                  </a>
+                  <div className='flex gap-2'>
+                    The
+                    <motion.a
+                      href='https://www.theodinproject.com/'
+                      className='odin text-amber-500'
+                    >
+                      Odin
+                    </motion.a>
+                    Project
+                  </div>
+                  <div className=' flex md:flex-row flex-col items-center justify-center gap-x-2'>
+                    <a href='https://github.com/chromecodes/shopping-cart'>
+                      <BiCodeAlt className='Code' />
+                    </a>
+                    chromecodes
+                    <a href='https://github.com/chromecodes'>
+                      <FaGithub className='FaGithub' />
+                    </a>
+                  </div>
                 </motion.div>
               </div>
               <div className='overflow-hidden'>
@@ -149,46 +153,46 @@ const About = ({ showCredits }) => {
             </div>
           </div>
 
-          <div className='midAt  row-span-3 col-span-3'></div>
-          <div className='bttmAt text-3xl glasses col-span-3'>
+          <div className='midAt row-span-3 col-span-2 lg:col-span-3'></div>
+          <div className='bttmAt glasses col-span-2 lg:col-span-3'>
             <motion.div
               variants={fade}
               animate='animate'
               initial='initial'
-              className='section yfrostr w-full h-full flex justify-center p-4'
+              className='section yfrostr w-full h-full flex lg:flex-row flex-col gap-y-3 justify-center p-4'
             >
               <div className='left h-full w-1/3'></div>
-              <div className='mid w-1/3 flex '>
-                <div className='news text-xl '>
+              <div className='mid w-full lg:w-1/3  '>
+                <div className='news text-xl md:text-2xl lg:block flex w-full flex-wrap justify-center items-center gap-x-3'>
                   <div className='l1'>Join our</div>
                   <label htmlFor='email'>News letter</label>
-                  <div className=' mailCnt text-xl pt-2 rounded-xl flex'>
+                  <div className=' mailCnt text-xl pt-2 rounded-xl flex justify-center '>
                     <input
-                      className='px-3 border-2 text-zinc-900 border-amber-600 rounded-l-xl focus:outline-none'
+                      className='px-3 w-[60%] border-2 text-zinc-900 border-amber-600 rounded-l-xl focus:outline-none'
                       type='email'
                       name='email'
                       id='email'
                       placeholder='E-mail'
                     />
-                    <button className='bg-amber-600 px-6 rounded-r-xl py-2'>
+                    <button className='bg-amber-600 px-6 rounded-r-xl lg:py-2'>
                       Join
                     </button>
                   </div>
                 </div>
               </div>
-              <div className='right h-full w-1/3 flex justify-center items-center '>
+              <div className='right h-full w-full lg:w-1/3 flex justify-center items-center '>
                 <motion.div className='icons flex gap-6'>
                   <motion.div>
-                    <GrInstagram className='h-8 w-8 cursor-pointer' />
+                    <GrInstagram className='h-6 w-6 md:h-8 md:w-8 cursor-pointer' />
                   </motion.div>
                   <motion.div>
-                    <GrTwitter className='h-8 w-8 cursor-pointer' />
+                    <GrTwitter className='h-6 w-6 md:h-8 md:w-8 cursor-pointer' />
                   </motion.div>
                   <motion.div>
-                    <GrFacebookOption className='h-8 w-8 cursor-pointer' />
+                    <GrFacebookOption className='h-6 w-6 md:h-8 md:w-8 cursor-pointer' />
                   </motion.div>
                   <motion.div>
-                    <GrPinterest className='h-8 w-8 cursor-pointer' />
+                    <GrPinterest className='h-6 w-6 md:h-8 md:w-8 cursor-pointer' />
                   </motion.div>
                 </motion.div>
               </div>
