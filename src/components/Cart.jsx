@@ -76,7 +76,7 @@ const Cart = ({
             duration: 0.1,
             ease: [0.51, 0.92, 0.24, 1.15],
           }}
-          className='cartWindow w-[0%] lg:w-3/5'
+          className='cartWindow w-[0%] xl:w-3/5 lg:w-2/5'
         ></motion.div>
 
         <motion.div
@@ -85,7 +85,7 @@ const Cart = ({
             duration: 0.05,
             ease: [0.51, 0.92, 0.24, 1.15],
           }}
-          className='cart w-full lg:w-2/5 bg-zinc-900 p-10 flex flex-col gap-y-8 justify-between items-center'
+          className='cart w-full xl:w-2/5 lg:w-3/5 bg-zinc-900 py-10 px-2 xs:p-10 flex flex-col gap-y-8 justify-between items-center'
         >
           <div className='toper flex justify-between w-full '>
             <div className='cartName pl-6 text-4xl lg:text-5xl font-inherit'>
@@ -97,7 +97,9 @@ const Cart = ({
             />
           </div>
 
-          <div className='cartItems flex grow w-[90%]'>{displayItems()}</div>
+          <div className='cartItems flex grow flex-wrap gap-3 w-[90%]'>
+            {displayItems()}
+          </div>
           <div className='total text-2xl lg:text-4xl '>
             Total : <span className='num font-bold'>{total}</span>
           </div>

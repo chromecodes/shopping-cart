@@ -76,18 +76,22 @@ const Cardexp = ({ item, shrinkCard, open, add }) => {
         >
           <motion.div
             variants={grow}
-            className='expandCard relative h-[35%] w-[85%] md:h-[40%] md:w-[65%] lg:h-[50%] xl:w-[40%] text-2xl rounded-3xl flex bg-zinc-900'
+            className='expandCard relative h-[35%] w-[85%] xs:h-[35%] xs:w-[85%] md:h-[40%] md:w-[65%] lg:h-[50%] xl:w-[45%] text-2xl rounded-3xl flex bg-zinc-900'
           >
-            <img className='h lg:h-full rounded-l-3xl' src={item.imgs} alt='' />
+            <img
+              className='w-[40%] xs:w-auto lg:h-full rounded-l-3xl'
+              src={item.imgs}
+              alt=''
+            />
             <div className='sideCnt flex flex-col justify-between'>
-              <div className='top'>
-                <div className='name xl:text-3xl  md:text-xl text-xl xl:pt-5 xl:pt-3 pl-3 pt-1   text-zinc-600 '>
+              <div className='top xl:pl-5 md:pl-4 pl-3'>
+                <div className='name xl:text-3xl xl:pt-5 xl:pb-3 md:text-3xl md:pt-3 md:pb-2 text-xl pt-1 text-zinc-600 '>
                   {item.type}
                 </div>
-                <div className='name xl:text-3xl md:text-xl text-lg text-slate-500 xl:pl-5 xl:pb-3 pl-3 pb-1'>
+                <div className='name xl:text-2xl xl:pb-2 md:pb-1 md:text-2xl pb-1 text-lg text-slate-500'>
                   {item.name}
                 </div>
-                <div className='name xl:text-3xl md:text-xl text-sm text-base  text-zinc-300 pl-3 '>
+                <div className='name xl:text-xl md:text-lg text-sm text-zinc-300'>
                   {item.des}
                 </div>
               </div>
@@ -97,13 +101,13 @@ const Cardexp = ({ item, shrinkCard, open, add }) => {
                     addItem();
                     shrinkCard();
                   }}
-                  className='add xl:text-3xl md:text-xl text-lg p-2 xl:p-5 w-1/2 bg-zinc-800 '
+                  className='add xl:text-3xl md:text-2xl text-lg p-2 xl:p-5 md:p-3 w-1/2 bg-zinc-800 '
                 >
                   Add to Cart
                 </button>
                 <button
                   onClick={checkoutItem}
-                  className='out xl:text-3xl md:text-xl text-lg p-2 xl:p-5 w-1/2 bg-slate-600 rounded-br-3xl '
+                  className='out xl:text-3xl md:text-2xl text-lg p-2 md:p-3 xl:p-5 w-1/2 bg-slate-600 rounded-br-3xl '
                 >
                   Checkout
                 </button>

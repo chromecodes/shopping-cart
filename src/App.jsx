@@ -120,7 +120,7 @@ export default function App() {
           }}
           className='thankCnt absolute w-screen h-screen glasses z-[3] flex justify-center items-center'
         >
-          <div className='thank text-4xl p-6 text-center rounded-3xl text-zinc-600 w-1/3 h-1/3 bg-zinc-900 flex justify-center items-center'>
+          <div className='thank lights text-4xl p-6 text-center rounded-3xl text-slate-200 w-3/4 md:w-2/4 xl:w-1/3 h-1/3 bg-zinc-900 flex justify-center items-center'>
             Thank you for checking out my project.
           </div>
         </div>

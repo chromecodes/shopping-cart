@@ -66,7 +66,7 @@ const Home = () => {
             variants={fromSideCnt}
             initial='initial'
             animate='animate'
-            className='text-4xl pl-16 pt-48 md:pt-56 md:pl-36 md:text-7xl lg:pt-64 lg:pl-28'
+            className='text-4xl pl-4 xs:pl-16 pt-48 md:pt-56 md:pl-36 md:text-7xl lg:pt-64 lg:pl-28'
           >
             <div className='flex gap-5'>
               <div className='overflow-hidden'>

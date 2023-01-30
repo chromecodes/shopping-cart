@@ -9,7 +9,7 @@ const Credits = ({ hideCredits }) => {
       }}
       className='creditCnt absolute w-screen h-screen glasses z-[3] flex justify-center items-center'
     >
-      <div className='md:w-3/5 md:text-3xl credit text-2xl w-[95%] p-8 rounded-3xl text-zinc-600  h-4/5 bg-zinc-900  '>
+      <div className='md:w-3/5 md:text-3xl credit text-2xl w-[95%] p-4 md:p-8 rounded-3xl text-zinc-600  h-4/5 bg-zinc-900  '>
         <div className='w-full h-full'>
           <div className='l1 flex justify-between'>
             <span>Credits</span>
@@ -47,7 +47,7 @@ const Credits = ({ hideCredits }) => {
             </div>
             <div className=' md:text-2xl pl-5 h-[90%] nums1 text-xl'>
               Items
-              <ol className='credit  md:text-xl pl-5 text-lg h-[89%] overflow-y-scroll gap-1 grid grid-cols-2 '>
+              <ol className='credit  md:text-xl pl-5 text-lg h-[85%] xs:h-[89%] overflow-y-scroll gap-1 grid grid-cols-2 '>
                 <li>
                   Photo by{" "}
                   <a href='https://unsplash.com/fr/@beazy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
@@ -59,14 +59,24 @@ const Credits = ({ hideCredits }) => {
                   </a>
                 </li>{" "}
                 <li>
-                  Photo by{" "}
-                  <a href='https://unsplash.com/es/@andresjasso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Andres Jasso
+                  Image by{" "}
+                  <a href='https://pixabay.com/users/simonprodl-143860/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=843461'>
+                    Simon Blüthenkranz
                   </a>{" "}
-                  on{" "}
-                  <a href='https://unsplash.com/photos/DR_A_zDkPHQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Unsplash
-                  </a>
+                  from{" "}
+                  <a href='https://pixabay.com/photos/bedside-lamp-light-bedside-table-843461/'>
+                    Pixabay
+                  </a>{" "}
+                </li>{" "}
+                <li>
+                  Image by{" "}
+                  <a href='https://pixabay.com/users/dimhou-5987327/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4053962'>
+                    Dim Hou
+                  </a>{" "}
+                  from{" "}
+                  <a href='https://pixabay.com/photos/lamp-lighting-decoration-light-4053962/'>
+                    Pixabay
+                  </a>{" "}
                 </li>{" "}
                 <li>
                   Photo by{" "}
@@ -80,31 +90,31 @@ const Credits = ({ hideCredits }) => {
                 </li>{" "}
                 <li>
                   Image by{" "}
-                  <a href='https://pixabay.com/users/simonprodl-143860/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=843461'>
-                    Simon Blüthenkranz
-                  </a>{" "}
-                  from{" "}
-                  <a href='https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=843461'>
-                    Pixabay
-                  </a>{" "}
-                </li>{" "}
-                <li>
-                  Image by{" "}
                   <a href='https://pixabay.com/users/ianvanderlinde-11469181/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6571362'>
                     Ian van der Linde
                   </a>{" "}
                   from{" "}
-                  <a href='https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6571362'>
+                  <a href='https://pixabay.com/photos/bedside-table-lamp-bedroom-bed-6571362/'>
                     Pixabay
                   </a>{" "}
                 </li>{" "}
                 <li>
+                  Photo by{" "}
+                  <a href='https://unsplash.com/es/@andresjasso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Andres Jasso
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/DR_A_zDkPHQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>
+                </li>{" "}
+                <li>
                   Image by{" "}
-                  <a href='https://pixabay.com/users/dimhou-5987327/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4053962'>
-                    Dim Hou
+                  <a href='https://pixabay.com/users/futuremoon-1532200/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7578025'>
+                    Jaime Perez
                   </a>{" "}
                   from{" "}
-                  <a href='https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4053962'>
+                  <a href='https://pixabay.com/photos/lamp-dark-night-home-decoration-7578025/'>
                     Pixabay
                   </a>{" "}
                 </li>{" "}
@@ -129,16 +139,6 @@ const Credits = ({ hideCredits }) => {
                   </a>{" "}
                 </li>{" "}
                 <li>
-                  Image by{" "}
-                  <a href='https://pixabay.com/users/futuremoon-1532200/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7578025'>
-                    Jaime Perez
-                  </a>{" "}
-                  from{" "}
-                  <a href='https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7578025'>
-                    Pixabay
-                  </a>{" "}
-                </li>{" "}
-                <li>
                   Photo by{" "}
                   <a href='https://unsplash.com/@casteunissen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
                     Cas Teunissen
@@ -148,28 +148,26 @@ const Credits = ({ hideCredits }) => {
                     Unsplash
                   </a>{" "}
                 </li>
-                <li>wall </li>{" "}
-                <li>
-                  {" "}
-                  Photo by{" "}
-                  <a href='https://unsplash.com/@kiranck123?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Kiran CK
-                  </a>{" "}
-                  on{" "}
-                  <a href='https://unsplash.com/photos/6hhPFXpuoWQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Unsplash
-                  </a>{" "}
-                </li>{" "}
                 <li>
                   Photo by{" "}
-                  <a href='https://unsplash.com/@foxfox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Natalia Yakovleva
+                  <a href='https://unsplash.com/@swabdesign_official?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    swabdesign
                   </a>{" "}
                   on{" "}
-                  <a href='https://unsplash.com/photos/NMtyjqXdi0k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                  <a href='https://unsplash.com/photos/a-dKi7SL8ms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
                     Unsplash
+                  </a>
+                </li>
+                <li>
+                  Photo by{" "}
+                  <a href='https://unsplash.com/@arturkornakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Artur Kornakov
                   </a>{" "}
-                </li>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/cpU3JRjiJwk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>
+                </li>
                 <li>
                   Photo by{" "}
                   <a href='https://unsplash.com/@wesleyshen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
@@ -201,6 +199,37 @@ const Credits = ({ hideCredits }) => {
                   </a>{" "}
                 </li>{" "}
                 <li>
+                  {" "}
+                  Photo by{" "}
+                  <a href='https://unsplash.com/@kiranck123?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Kiran CK
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/6hhPFXpuoWQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>{" "}
+                </li>{" "}
+                <li>
+                  Photo by{" "}
+                  <a href='https://unsplash.com/@adnonda?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Letizia Agosta
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/BAlId0HSOdM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>{" "}
+                </li>{" "}
+                <li>
+                  Photo by{" "}
+                  <a href='https://unsplash.com/@foxfox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Natalia Yakovleva
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/NMtyjqXdi0k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>{" "}
+                </li>{" "}
+                <li>
                   Photo by{" "}
                   <a href='https://unsplash.com/@pie06tro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
                     Pietro Piovesan
@@ -216,64 +245,50 @@ const Credits = ({ hideCredits }) => {
                     Letizia Agosta
                   </a>{" "}
                   on{" "}
-                  <a href='https://unsplash.com/photos/BAlId0HSOdM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                  <a href='https://unsplash.com/photos/IeabWRt5ksw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
                     Unsplash
-                  </a>{" "}
-                </li>{" "}
+                  </a>
+                </li>
                 <li>
-                  {" "}
-                  Photo by :
-                  <a href='https://www.pexels.com/photo/turned-on-grey-table-lamp-1643280/'>
-                    Dorran
+                  Photo by{" "}
+                  <a href='https://unsplash.com/@polarmermaid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Anne Nygård
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/yld7ujjPRF8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>
+                </li>
+                <li>
+                  Photo by{" "}
+                  <a href='https://unsplash.com/de/@rc820?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Chirayu Trivedi
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/FujGehh8SzE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
                   </a>
                 </li>{" "}
                 <li>
-                  {" "}
                   Photo by{" "}
-                  <a href='https://unsplash.com/ja/@lumachrome?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Renè Müller
+                  <a href='https://unsplash.com/@giorgiotrovato?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Giorgio Trovato
                   </a>{" "}
                   on{" "}
-                  <a href='https://unsplash.com/photos/0dOKtrTX0Yc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                  <a href='https://unsplash.com/photos/lrfXajlUo2E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
                     Unsplash
-                  </a>{" "}
-                </li>{" "}
-                <li>
-                  Photo by{" "}
-                  <a href='https://unsplash.com/@mak_jp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Mak
-                  </a>{" "}
-                  on{" "}
-                  <a href='https://unsplash.com/photos/Sy_qwu-7n2I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Unsplash
-                  </a>{" "}
-                </li>{" "}
-                <li>
-                  Photo by{" "}
-                  <a href='https://unsplash.com/@mak_jp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Mak
-                  </a>{" "}
-                  on{" "}
-                  <a href='https://unsplash.com/photos/Sy_qwu-7n2I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Unsplash
-                  </a>{" "}
-                </li>{" "}
-                <li>
-                  Photo by{" "}
-                  <a href='https://unsplash.com/@jerry_318?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Jerry Wang
-                  </a>{" "}
-                  on{" "}
-                  <a href='https://unsplash.com/photos/If31FcfN_HM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
-                    Unsplash
-                  </a>{" "}
-                </li>{" "}
-                <li>
-                  Photo by :
-                  <a href='https://www.pexels.com/photo/white-light-lamps-turned-on-during-night-9817389/'>
-                    Plato Terentev
                   </a>
-                </li>{" "}
+                </li>
+                <li>
+                  Photo by{" "}
+                  <a href='https://unsplash.com/fr/@foxfox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Natalia Y.
+                  </a>{" "}
+                  on{" "}
+                  <a href='https://unsplash.com/photos/R-qWnGTaAyU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+                    Unsplash
+                  </a>
+                </li>
               </ol>
             </div>
           </div>

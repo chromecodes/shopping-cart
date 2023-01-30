@@ -156,13 +156,13 @@ const Shop = ({ open, add, expandCard }) => {
           </motion.div>
         </motion.div>
 
-        <div className='shelf text-2xl w-full h-4/5 md:w-4/5 md:h-[99.5%]'>
-          <div className='mt-2 md:mt-8 pl-6 md:pl-12 border-l-2 border-zinc-800 h-[99%] '>
+        <div className='shelf text-2xl w-full h-4/5 md:w-4/5 md:h-[99%]'>
+          <div className='mt-2 md:mt-8 border-l-2 border-zinc-800 h-[99%] md:h-[95.5%]'>
             <motion.div
               variants={fromCnt}
               initial='initial'
               animate='animate'
-              className='cardContainer flex xl:gap-12 md:gap-6 gap-4 flex-wrap h-full'
+              className='cardContainer flex justify-center xl:gap-12 md:gap-6 gap-4 flex-wrap h-full'
             >
               {createItem()}
             </motion.div>

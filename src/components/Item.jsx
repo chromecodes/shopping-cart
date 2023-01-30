@@ -9,7 +9,9 @@ const Item = ({ item, i, removeItem, increItem, decreItem }) => {
       <div className='itemCnt h-24 md:h-36 flex justify-between w-[95%]'>
         <img className='img rounded-full' src={item.img} />
         <div className='detail flex flex-col gap-1'>
-          <div className='name text-2xl md:text-4xl w-58'>{item.name} </div>
+          <div className='name text-lg xs:text-2xl md:text-4xl w-58'>
+            {item.name}{" "}
+          </div>
           <div className='num flex gap-4 text-xl md:text-2xl font-semibold justify-end'>
             <VscTag /> {item.price}
           </div>

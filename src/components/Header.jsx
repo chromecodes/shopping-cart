@@ -59,7 +59,7 @@ const Header = ({ open, items }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={transition}
-            className='logo pt-6 pl-8 text-6xl font-medium leading-7 md:pt-12 lg:pl-16 md:text-8xl md:leading-11'
+            className='logo pt-1 pl-2 xs:pt-6 xs:pl-8 text-6xl font-medium leading-7 md:pt-12 lg:pl-16 md:text-8xl md:leading-11'
           >
             <span className='lights'>lights</span>
             <span className='text-slate-300'>&</span>
@@ -72,7 +72,7 @@ const Header = ({ open, items }) => {
             variants={linksCnt}
             initial='initial'
             animate='animate'
-            className='nav flex gap-6 text-xl pr-4 lg:pr-28 md:text-2xl md:gap-16 text-slate-300 '
+            className='nav flex gap-3 pr-1 xs:gap-6 xs:pr-4 text-xl  lg:pr-28 md:text-2xl md:gap-16 text-slate-300 '
           >
             <div className='overflow-hidden'>
               <motion.div variants={links}>
