@@ -17,7 +17,15 @@ const Shop = ({ open, add, expandCard }) => {
 
   const createItem = () => {
     return items.map((item) => {
-      return <Card item={item} open={open} add={add} expandCard={expandCard} />;
+      return (
+        <Card
+          key={item.id}
+          item={item}
+          open={open}
+          add={add}
+          expandCard={expandCard}
+        />
+      );
     });
   };
 

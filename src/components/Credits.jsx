@@ -5,7 +5,9 @@ const Credits = ({ hideCredits }) => {
   return (
     <div
       onClick={(e) => {
-        console.log(e);
+        if (e.target.classList[0] === "creditCnt") {
+          hideCredits();
+        }
       }}
       className='creditCnt absolute w-screen h-screen glasses z-[3] flex justify-center items-center'
     >
@@ -46,7 +48,11 @@ const Credits = ({ hideCredits }) => {
               </ol>
             </div>
             <div className=' md:text-2xl pl-5 h-[90%] nums1 text-xl'>
-              Items
+              Items{" -"}
+              <span className='text-xl text-zinc-700'>
+                {" "}
+                (order of the cerdits is same as the items orders)
+              </span>
               <ol className='credit  md:text-xl pl-5 text-lg h-[85%] xs:h-[89%] overflow-y-scroll gap-1 grid grid-cols-2 '>
                 <li>
                   Photo by{" "}

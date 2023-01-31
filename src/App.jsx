@@ -68,7 +68,6 @@ export default function App() {
   };
 
   const expandCard = (i) => {
-    console.log(i);
     updateCardExd(true);
     updateCrrtCard(i);
   };
@@ -76,10 +75,6 @@ export default function App() {
   const shrinkCard = () => {
     updateCardExd(false);
   };
-
-  useEffect(() => {
-    console.log(crrtCard);
-  }, [crrtCard]);
 
   const sayThanks = () => {
     updateThank(true);
