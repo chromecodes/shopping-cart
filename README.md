@@ -26,10 +26,12 @@
                 </li>{" "}
               </ol>
             </div>
-           Items
+            <div className=' md:text-2xl pl-5 h-[90%] nums1 text-xl'>
+              Items{" -"}
+              <span className='text-xl text-zinc-700'>
                 {" "}
                 (order of the cerdits is same as the items orders)
-
+              </span>
               <ol className='credit  md:text-xl pl-5 text-lg h-[85%] xs:h-[89%] overflow-y-scroll gap-1 grid grid-cols-2 '>
                 <li>
                   Photo by{" "}
