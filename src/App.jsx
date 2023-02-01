@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Cart from "./components/Cart";
 import { AnimatePresence } from "framer-motion";
 import Cardexp from "./components/Cardexp";
-import { FaBullseye } from "react-icons/fa";
 import Credits from "./components/Credits";
 
 export default function App() {
@@ -48,7 +47,8 @@ export default function App() {
     let totalI = cart.reduce((a, b) => {
       return a + b.price * b.amt;
     }, 0);
-    updateTotal(totalI);
+    let totalF = Math.round(totalI * 100) / 100;
+    updateTotal(totalF);
   }, [cart]);
 
   const increItem = (i) => {

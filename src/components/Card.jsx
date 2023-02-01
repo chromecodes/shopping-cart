@@ -33,8 +33,10 @@ const Card = ({ item, open, add, expandCard }) => {
           </div>
           <div className='w-28 md:w-40 xl:w-56 bg-zinc-900 p-3 leading-5 h-20 md:h-auto text-base xl:text-xl rounded-b-xl xl:rounded-b-3xl'>
             <div className='t'> {item.name} </div>
-            <div className='num font-bold flex gap-x-2 justify-end'>
-              <VscTag /> {item.price}
+            <div className='font-bold flex justify-end items-center'>
+              <VscTag className='mr-2' />{" "}
+              <span className='itemAmt font-light mr-1 text-lg'>$</span>
+              <span className='num pt-1'>{item.price} </span>
             </div>
           </div>
         </div>

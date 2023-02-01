@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     let int = setInterval(() => {
       blink();
-    }, 5000);
+    }, 4000);
 
     return () => {
       clearInterval(int);

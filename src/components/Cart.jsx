@@ -101,7 +101,7 @@ const Cart = ({
             {displayItems()}
           </div>
           <div className='total text-2xl lg:text-4xl '>
-            Total : <span className='num font-bold'>{total}</span>
+            Total : $ <span className='num font-bold'>{total}</span>
           </div>
 
           <motion.button

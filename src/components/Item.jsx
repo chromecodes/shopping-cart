@@ -12,8 +12,10 @@ const Item = ({ item, i, removeItem, increItem, decreItem }) => {
           <div className='name text-lg xs:text-2xl md:text-4xl w-58'>
             {item.name}{" "}
           </div>
-          <div className='num flex gap-4 text-xl md:text-2xl font-semibold justify-end'>
-            <VscTag /> {item.price}
+          <div className='num flex text-xl md:text-2xl font-semibold justify-end items-center'>
+            <VscTag className='mr-2' />
+            <span className='itemAmt mr-1 font-normal'>$</span>
+            <span className='mt-1'>{item.price}</span>
           </div>
           <div className='counter flex gap-4 text-3xl items-center justify-center'>
             <button className='dcre glass rounded-full'>
