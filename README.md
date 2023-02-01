@@ -1,5 +1,7 @@
 # Project No : 15 - Shopping Cart
 
+## Image credits
+
 <div className='pl-5 nums1 md:text-2xl text-xl'>
               Backgrounds
               <ol className='credit md:text-xl pl-5 text-lg overflow-y-scroll grid grid-cols-2 '>
@@ -26,7 +28,7 @@
               </ol>
             </div>
             <div className=' md:text-2xl pl-5 h-[90%] nums1 text-xl'>
-              Items -(order of the cerdits is same as the items orders)
+              Items - (order of the cerdits is same as the items orders)
               <ol className='credit  md:text-xl pl-5 text-lg h-[85%] xs:h-[89%] overflow-y-scroll gap-1 grid grid-cols-2 '>
                 <li>
                   Photo by 
