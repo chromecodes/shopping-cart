@@ -21,7 +21,7 @@ const Credits = ({ hideCredits }) => {
             />
           </div>
           <div className='l2 h-[90%]'>
-            <div className='pl-5 nums1 md:text-2xl text-xl'>
+            <div className='pl-5 md:text-2xl text-xl'>
               Backgrounds
               <ol className='credit md:text-xl pl-5 text-lg overflow-y-scroll grid grid-cols-2 '>
                 <li>
@@ -47,7 +47,7 @@ const Credits = ({ hideCredits }) => {
                 </li>{" "}
               </ol>
             </div>
-            <div className=' md:text-2xl pl-5 h-[90%] nums1 text-xl'>
+            <div className=' md:text-2xl pl-5 h-[90%] text-xl'>
               Items{" -"}
               <span className='text-xl text-zinc-700'>
                 {" "}

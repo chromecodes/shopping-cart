@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: neon2;
+  font-family: logo;
   src: url(./assets/fonts/Bastinsondemo-MV57n.otf);
 }
 @font-face {
@@ -21,13 +21,14 @@
   src: url(./assets/fonts/LovelineGlamour-owdE0.ttf);
 }
 @font-face {
-  font-family: sss;
+  font-family: SNR;
   src: url(./assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
 }
 
 #root {
   height: 100vh;
   width: 100vw;
+  font-family: SNR;
 }
 
 .app {
@@ -35,38 +36,18 @@
   height: 100vh;
 }
 .logo {
-  font-family: neon2;
+  font-family: logo;
 }
 .itemAmt {
   font-family: Nunito;
 }
-.nav {
-  font-family: sss;
-}
-.home,
-.about {
-  font-family: sss;
-}
-.shop {
-  background-color: black;
-  font-family: sss;
-}
-.cartCnt,
-.expandCard,
-.about,
-.thankCnt,
-.credit {
-  font-family: sss;
+.num {
+  font-family: aaa;
 }
 .credit > li > a {
   color: #d977068a;
 }
-.num {
-  font-family: aaa;
-}
-.cardContainer {
-  overflow-y: scroll;
-}
+
 .cardContainer,
 .cartItems {
   overflow-y: scroll;
@@ -79,6 +60,7 @@
 .ltbtAt {
   grid-row: 4;
 }
+
 .glass {
   background: radial-gradient(
     circle,
