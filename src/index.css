@@ -6,23 +6,16 @@
 
 @font-face {
   font-family: logo;
-  src: url(./assets/fonts/Bastinsondemo-MV57n.otf);
+  src: url(assets/fonts/Bastinsondemo-MV57n.otf);
 }
 @font-face {
-  font-family: aaa;
-  src: url(./assets/fonts/Carry-You.ttf);
+  font-family: num;
+  src: url(assets/fonts/Carry-You.ttf);
 }
-@font-face {
-  font-family: font4;
-  src: url(./assets/fonts/SunsetClubFreeTrial-2ODpw.otf);
-}
-@font-face {
-  font-family: ll;
-  src: url(./assets/fonts/LovelineGlamour-owdE0.ttf);
-}
+
 @font-face {
   font-family: SNR;
-  src: url(./assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
+  src: url(assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
 }
 
 #root {
@@ -42,8 +35,9 @@
   font-family: Nunito;
 }
 .num {
-  font-family: aaa;
+  font-family: num;
 }
+
 .credit > li > a {
   color: #d977068a;
 }

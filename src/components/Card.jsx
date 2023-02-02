@@ -35,7 +35,7 @@ const Card = ({ item, open, add, expandCard }) => {
             <div className='t'> {item.name} </div>
             <div className='font-bold flex justify-end items-center'>
               <VscTag className='mr-2' />{" "}
-              <span className='itemAmt font-light mr-1 text-lg'>$</span>
+              <span className='font-light mr-1 mt-0.5 text-xl'>$</span>
               <span className='num pt-1'>{item.price} </span>
             </div>
           </div>
