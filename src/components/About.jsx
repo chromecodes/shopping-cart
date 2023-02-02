@@ -97,7 +97,7 @@ const About = ({ showCredits }) => {
           duration: 0.3,
           ease: [0.43, 0.13, 0.23, 0.96],
         }}
-        className='about text-slate-100 h-screen w-screen bg-cover bg-[url("./assets/img/bg/bgAbout.png")] '
+        className='about text-slate-100 h-screen w-screen bg-cover bg-[url("img/bg/bgAbout.png")] '
       >
         <motion.div className='w-full h-full grid  grid-cols-3 lg:grid-cols-4 grid-rows-4'>
           <motion.div className='leftAt row-span-3 flex flex-col items-center text-4xl'>
