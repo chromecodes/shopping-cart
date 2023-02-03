@@ -61,7 +61,7 @@ const Home = () => {
         transition={{ duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] }}
         className='home text-amber-400 h-screen w-screen bg-black'
       >
-        <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("img/bg/bgHomeMb.png")] lg:bg-[url("img/bg/bgHome.png")]'>
+        <div className=' h-screen w-screen bg-cover bg-no-repeat bg-right bg-[url("/src/assets/img/bg/bgHomeMb.png")] lg:bg-[url("/src/assets/img/bg/bgHome.png")]'>
           <motion.div
             variants={fromSideCnt}
             initial='initial'
