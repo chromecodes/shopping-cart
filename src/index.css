@@ -3,7 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
+
 @font-face {
   font-family: neon2;
   src: url(./assets/fonts/Bastinsondemo-MV57n.otf);
@@ -23,7 +23,7 @@
 @font-face {
   font-family: sss;
   src: url(./assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
-} */
+}
 
 #root {
   height: 100vh;
