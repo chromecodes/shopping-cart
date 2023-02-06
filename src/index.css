@@ -5,26 +5,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: neon2;
+  font-family: logo;
   src: url(./assets/fonts/Bastinsondemo-MV57n.otf);
 }
 @font-face {
-  font-family: aaa;
+  font-family: num;
   src: url(./assets/fonts/Carry-You.ttf);
 }
 @font-face {
-  font-family: font4;
-  src: url(./assets/fonts/SunsetClubFreeTrial-2ODpw.otf);
-}
-@font-face {
-  font-family: ll;
-  src: url(./assets/fonts/LovelineGlamour-owdE0.ttf);
-}
-@font-face {
-  font-family: sss;
+  font-family: neon;
   src: url(./assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
 }
-
 #root {
   height: 100vh;
   width: 100vw;
@@ -35,34 +26,29 @@
   height: 100vh;
 }
 .logo {
-  font-family: neon2;
+  font-family: logo;
 }
 .itemAmt {
   font-family: Nunito;
 }
-.nav {
-  font-family: sss;
-}
+
+.nav,
 .home,
-.about {
-  font-family: sss;
-}
-.shop {
-  background-color: black;
-  font-family: sss;
-}
+.about,
+.shop,
 .cartCnt,
 .expandCard,
 .about,
 .thankCnt,
 .credit {
-  font-family: sss;
+  font-family: neon;
 }
+
 .credit > li > a {
   color: #d977068a;
 }
 .num {
-  font-family: aaa;
+  font-family: num;
 }
 .cardContainer {
   overflow-y: scroll;
