@@ -22,10 +22,9 @@ const Card = ({ item, open, add, expandCard }) => {
   return (
     <div className='overflow-hidden'>
       <motion.div variants={fromBottom} className='card rounded-3xl '>
-        <div className='shrinkCard cursor-pointer'>
+        <div onClick={expand} className='shrinkCard cursor-pointer'>
           <div className='md:w-40 w-28 xl:w-56 rounded-3xl '>
             <img
-              onClick={expand}
               className='rounded-t-xl xl:rounded-t-3xl'
               src={item.img}
               alt={item.name}

@@ -6,15 +6,15 @@
 
 @font-face {
   font-family: logo;
-  src: url(./assets/fonts/Bastinsondemo-MV57n.otf);
+  src: url(assets/fonts/Bastinsondemo-MV57n.otf);
 }
 @font-face {
   font-family: num;
-  src: url(./assets/fonts/Carry-You.ttf);
+  src: url(assets/fonts/Carry-You.ttf);
 }
 @font-face {
   font-family: neon;
-  src: url(./assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
+  src: url(assets/fonts/ShiftyNotesRegular-BWZ6d.ttf);
 }
 #root {
   height: 100vh;

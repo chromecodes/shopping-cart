@@ -126,7 +126,7 @@ const Shop = ({ open, add, expandCard }) => {
 
             <motion.div
               variants={fade}
-              className=' md:mt-8 pr-5 flex md:pl pl-28 md:flex-col items-end gap-y-5'
+              className=' md:mt-8 flex justify-center md:pl-16 xl:pl-28 md:flex-col items-end gap-y-5'
             >
               <motion.div whileHover='hover' initial='rest' animate='rest'>
                 <div
@@ -165,7 +165,7 @@ const Shop = ({ open, add, expandCard }) => {
         </motion.div>
 
         <div className='shelf text-2xl w-full h-4/5 md:w-4/5 md:h-[99%]'>
-          <div className='mt-2 md:mt-8 border-l-2 border-zinc-800 h-[99%] md:h-[95.5%]'>
+          <div className='mt-4 md:mt-8 md:border-l-2 border-zinc-800 h-[98%] md:h-[95.5%]'>
             <motion.div
               variants={fromCnt}
               initial='initial'
